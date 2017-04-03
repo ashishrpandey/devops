@@ -1,0 +1,16 @@
+Check Java Version on your computer
+$java -version
+
+For jenkins Java 7 is required and Java 8 is recommended
+
+Download Jenkins from www.jenkins.io/download for your platform
+
+Install Jenkin
+
+Launch Jenkin
+It shall open in web-browser at localhost:8080 
+Enter initial passowrd on the first page.
+Change admin password 
+
+Your Jenkin Dashboard is ready
+Explore it !!!
