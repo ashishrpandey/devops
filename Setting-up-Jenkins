@@ -14,3 +14,22 @@ Change admin password
 
 Your Jenkin Dashboard is ready
 Explore it !!!
+
+
+
+##############Installing Jenkins on ec2 instances ################
+yum update -y
+wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
+rpm --import http://pkg.jenkins-ci.org/redhat-stable/jenkins-ci.org.key
+yum install jenkins
+service jenkins start
+chkconfig jenkins on
+cat /var/lib/jenkins/secrets/initialAdminPassword
+
+use the content of file for initial admin password
+
+Edit security group inbound rules
+Add rules for http and "custom tcp rule" and port number 8080
+
+open : <public IP>:8080 
+-> jenkins dashboard
