@@ -21,7 +21,22 @@ base layer: package layer: configuration layer
 $ docker inspect <image name/image-id>
 
 $ docker pull docker/whalesay       ## Download docker/whalesay image to local host machine from docker-hub repo
-$ docker run docker/whalesay        ## run container
+$ docker run docker/whalesay cowsay IAMWHALE     ## run container 
+ __________
+< IAMWHALE >
+ ----------
+    \
+     \
+      \
+                    ##        .
+              ## ## ##       ==
+           ## ## ## ##      ===
+       /""""""""""""""""___/ ===
+  ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~
+       \______ o          __/
+        \    \        __/
+          \____\______/
+        
 
 
 $ docker ps                         ## lists the containers running
