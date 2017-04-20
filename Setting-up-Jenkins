@@ -33,3 +33,13 @@ Add rules for http and "custom tcp rule" and port number 8080
 
 open : <public IP>:8080 
 -> jenkins dashboard
+
+
+********************* Connecting it with github *********************
+To trigger builds every time some code is checked-in to the git, follow below steps:
+At Jenkins:
+In configuration of the project at jenkins under "build trigger" section select "GitHub hook trigger for GITScm polling"
+At github sever:
+Open your github account --> select the project repository -- > opent setting page of the repo --> select web-hooks tab
+--> add webhook --> enter in Payload URL folowing URL:   http://<Name of Jenkins server>:8080/github-webhook/  
+--> select "just the push event" 
