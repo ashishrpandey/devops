@@ -43,3 +43,8 @@ At github sever:
 Open your github account --> select the project repository -- > opent setting page of the repo --> select web-hooks tab
 --> add webhook --> enter in Payload URL folowing URL:   http://<Name of Jenkins server>:8080/github-webhook/  
 --> select "just the push event" 
+
+
+**********************Setup maven tool *******************
+manage jenkins---> configure global tools --> add Java jdk--> add maven home --> add git --> IN the build step write
+clean package
