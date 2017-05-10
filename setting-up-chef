@@ -1,0 +1,12 @@
+Select appropriate rpm for your machine and download:
+
+$wget https://packages.chef.io/files/stable/chefdk/1.3.43/el/7/chefdk-1.3.43-1.el7.x86_64.rpm
+install the rpm:
+$rpm -i chefdk-1.3.43-1.el7.x86_64.rpm
+
+Give the user root permissions:
+$usermod -g wheel ec2-user
+Test if chef is working fine:
+$ chef-client --local-mode
+ 
+ 
