@@ -1,0 +1,8 @@
+ set the JENKINS_HOME environment variable to the directory you wish Jenkins to run under
+ For any help on jenkins:
+ 
+ Java –jar jenkins.war –help
+Java –jar jenkins.war –httpsPort=8443 –httpPort=-1
+
+Jenkins will start to run over https on port 8443. 
+The HTTP port is turned off by setting httpPort=-1 and the terminal will display logging information.
