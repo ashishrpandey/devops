@@ -1,0 +1,5 @@
+docker pull jenkins   ## install Jenkins
+docker run -d -p 49001:8080 -v $PWD/jenkins:/var/jenkins_home -t jenkins    
+## Here /var/jenkins_home from the container is mapped to jenkins/ directory from the current path on the host. 
+Jenkins 8080 port is also exposed to the host as 49001.
+
