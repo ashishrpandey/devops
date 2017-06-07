@@ -2,38 +2,57 @@ Check Java Version on your computer
 $java -version
 
 For jenkins Java 7 is required and Java 8 is recommended
-
+***********Shorter version**************
 Download Jenkins from www.jenkins.io/download for your platform
-
 Install Jenkin
-
 Launch Jenkin
 It shall open in web-browser at localhost:8080 
 Enter initial passowrd on the first page.
 Change admin password 
-
+Install suggested plug-ins.
 Your Jenkin Dashboard is ready
 Explore it !!!
 
-
+*********** Detailed version**************
 
 ##############Installing Jenkins on ec2 instances ################
 yum update -y
 wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
 rpm --import http://pkg.jenkins-ci.org/redhat-stable/jenkins-ci.org.key
+yum list jenkins     ## just to see the available jenkins variants
+yum list --show-duplicates jenkins     ## To see the more coprehensive list of all available jenkins versions
 yum install jenkins
+OR
+yum install jenkins-2.19.4-1.1
+
+## If you dont want yum to update jenkins
+yum-config-manager --disable jenkins
+
+## See if the port 8080 is available for jenkins
+netstat -tulpn|grep 8080
+
+
 service jenkins start
+##OR
+systemctl start jenkins
+systemctl enable jenkins        ## To make sure that it runs with every reboot
+
+watch n=1 "netstat -tulpn|grep 8080"
 chkconfig jenkins on
-cat /var/lib/jenkins/secrets/initialAdminPassword
 
-use the content of file for initial admin password
-
-Edit security group inbound rules
-Add rules for http and "custom tcp rule" and port number 8080
-
-open : <public IP>:8080 
+open in your web browser:
+: <public IP>:8080 
 -> jenkins dashboard
 
+For the first time it will ask for a "initial admin password" whose path it will tell you.
+cat /var/lib/jenkins/secrets/initialAdminPassword
+copy the password from this location and enter it in the web page
+
+Edit security group inbound rules on your ec2 instance
+Add rules for http and "custom tcp rule" and port number 8080
+
+Install suggested plug-ins.
+you will get the jenkins dash board.
 
 ********************* Connecting it with github *********************
 To trigger builds every time some code is checked-in to the git, follow below steps:
