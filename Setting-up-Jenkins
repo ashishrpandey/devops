@@ -52,7 +52,9 @@ Edit security group inbound rules on your ec2 instance
 Add rules for http and "custom tcp rule" and port number 8080
 
 Install suggested plug-ins.
-you will get the jenkins dash board.
+Change Admin password
+
+Welcome to jenkins dashboard.
 
 ********************* Connecting it with github *********************
 To trigger builds every time some code is checked-in to the git, follow below steps:
