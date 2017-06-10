@@ -4,6 +4,18 @@ $ sudo yum-config-manager \
     https://download.docker.com/linux/centos/docker-ce.repo
 $ sudo yum install docker-ce
 $ sudo systemctl start docker
+$ sudo systemctl status docker
+
+sudo usermod ec2-user -G docker
+
+## At this stage if you run commands like $docker images
+## it wont work. To achieve that
+$ sudo usermod ec2-user -G docker
+$ exit 
+re-login
+Now:
+$ docker images 
+it will work but no image yet.
 
 ## To check whether it has worked correctly 
 $sudo docker run hello-world
