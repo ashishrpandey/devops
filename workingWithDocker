@@ -1,2 +1,17 @@
 Go throough https://docs.docker.com/get-started/part2/#share-your-image
 
+## Create a repository on dockerhub [ashishrpandey/dockerrepo]
+## Create tag 
+[ec2-user@ip-172-31-16-96 ~]$ docker tag hello-world:latest ashishrpandey/dockerrepo:new
+[ec2-user@ip-172-31-16-96 ~]$ docker push --help
+[ec2-user@ip-172-31-16-96 ~]$ docker login --username=ashishrpandey
+Password:
+Login Succeeded
+[ec2-user@ip-172-31-16-96 ~]$ docker push ashishrpandey/dockerrepo:new
+## Runt these commands to get more info about the docker
+docker version
+docker info
+
+## All the fils related to containers and images are kept at /var/lib/docker/
+
+
