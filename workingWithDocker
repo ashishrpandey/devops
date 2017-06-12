@@ -16,4 +16,23 @@ docker info
 
 **************Launch docker ***************
 
+Launch a container running a PostgreSQL database and pass it the --net=my_bridge flag to connect it to your new network:
+$ docker run -d --net=my_bridge --name container_name training/postgres
+
+*********** Details of container ***********
+ $ docker inspect container_name
+ 
+ 
+*********** Network Containers ************
+$ docker network ls
+
+$ docker run -itd --name=container_name ubuntu  ## run container with name container_name
+$ docker network inspect bridge  ## inspect bridge network
+### To get the ipaddress of the container:
+$docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' container_name
+
+You can remove a container from a network by disconnecting the container. 
+$ docker network disconnect bridge container_name
+
+
 
