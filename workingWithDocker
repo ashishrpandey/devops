@@ -35,4 +35,10 @@ You can remove a container from a network by disconnecting the container.
 $ docker network disconnect bridge container_name
 
 
+*********** Adding data volumes to Containers ************
+This will create a new volume inside a container at /webapp.
+$ docker run -d -P --name web -v /webapp training/webapp python app.py
+
+
+
 
