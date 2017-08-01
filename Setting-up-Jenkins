@@ -1,38 +1,35 @@
-Check Java Version on your computer
-$java -version
+General procedure to install Jenkins:
 
-For jenkins Java 7 is required and Java 8 is recommended
-
+$java -version  ## Check if Java is already installed
+For jenkins Java 8 is required.
 Download Jenkins from www.jenkins.io/download for your platform
-
 Install Jenkin
-
 Launch Jenkin
 It shall open in web-browser at localhost:8080 
 Enter initial passowrd on the first page.
 Change admin password 
-
 Your Jenkin Dashboard is ready
 Explore it !!!
 
-
-
-##############Installing Jenkins on ec2 instances ################
+############## Step-by-step installation of Jenkins on ec2 instances ################
 yum update -y
-wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
-rpm --import http://pkg.jenkins-ci.org/redhat-stable/jenkins-ci.org.key
-yum install jenkins
-service jenkins start
-chkconfig jenkins on
-cat /var/lib/jenkins/secrets/initialAdminPassword
-
-use the content of file for initial admin password
+wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo  ## Add jenkins in yum repo
+rpm --import http://pkg.jenkins-ci.org/redhat-stable/jenkins-ci.org.key  ##download the key necessary for proper installation
+yum install jenkins         ## install Jenkins
+service jenkins start       ## Start Jenkins
+chkconfig jenkins on        ## Check if Jenkins is working
+cat /var/lib/jenkins/secrets/initialAdminPassword           ## Get the initial admin password gor first login
+          ##use the content of file for initial admin password
 
 Edit security group inbound rules
-Add rules for http and "custom tcp rule" and port number 8080
-
-open : <public IP>:8080 
--> jenkins dashboard
+Add rules for:
+  http at port number 80
+  and "custom tcp rule" at port number 8080
+open : <public ip>:8080    ## e.g 172.13.0.2:8080
+We will get jenkins dashboard:
+Login as admin with the above-said password.
+Change password.
+Create new user. ##optional
 
 
 ********************* Connecting it with github *********************
