@@ -1,0 +1,2 @@
+sudo yum install tomcat6 tomcat6-webapps
+sudo service tomcat6 start
