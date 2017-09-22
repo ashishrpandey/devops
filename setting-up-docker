@@ -5,8 +5,17 @@ $ sudo yum-config-manager \
 $ sudo yum install docker-ce
 $ sudo systemctl start docker
 
+
+
+***********For ec2 instance ************
+connect to ec2 instance through putty
+$ sudo su
+$ yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+$ yum install docker
+$ service docker start
+
 ## To check whether it has worked correctly 
-$sudo docker run hello-world
+$ docker run hello-world
 It shall give following output:
 
 """
