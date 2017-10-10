@@ -7,3 +7,11 @@ $mvn --version
 $mvn test
 
 
+If you have 2 versions of java on system run below commands to select appropriate version of java
+#after each command you will need to give your choice
+
+sudo alternatives --config java
+sudo alternatives --config javac
+sudo alternatives --config jre_openjdk
+sudo alternatives --config java_sdk_openjdk
+
