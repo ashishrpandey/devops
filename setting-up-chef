@@ -10,3 +10,14 @@ Test if chef is working fine:
 $ chef-client --local-mode
  
  
+Reference:
+https://docs.chef.io/install_dk.html
+ https://packages.chef.io/files/stable/chefdk/2.4.17/el/6/chefdk-2.4.17-1.el6.x86_64.rpm
+ $ which ruby
+ TO let chef use its own ruby system do this:
+ echo 'eval "$(chef shell-init bash)"' >> ~/.bash_profile
+ and 
+ eval "$(chef shell-init bash)"
+
+  Run which ruby again. It should return /opt/chefdk/embedded/bin/ruby.
+    $ which ruby
