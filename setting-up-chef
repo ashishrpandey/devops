@@ -57,6 +57,9 @@ In /root/.chef/.knife.rb   :
 knife[:aws_access_key_id] = "***"
 knife[:aws_secret_access_key] = "***"
 knife[:region] = "ap-south-1"
+knife[:chef_mode] = "solo"
+knife[:node_name] = "client"
+
 
 try command:
 knife ec2  server list
