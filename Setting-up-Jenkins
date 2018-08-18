@@ -45,3 +45,11 @@ Open your github account --> select the project repository -- > opent setting pa
 **********************Setup maven tool *******************
 manage jenkins---> configure global tools --> add Java jdk--> add maven home --> add git --> IN the build step write
 clean package
+
+
+*********For ubuntu Machine **********
+wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
+sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt-get update
+sudo apt-get install jenkins
+
