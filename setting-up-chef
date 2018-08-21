@@ -70,5 +70,3 @@ Use knife command to create the instance in your aws account:
 
 A client.pem is needed in /etc/chef/client.pem ??
 
-
- 
