@@ -1,5 +1,8 @@
 ## Adding a slave/node/Agent
 
+# Also refer to this link:
+https://docs.aws.amazon.com/aws-technical-content/latest/jenkins-on-aws/worker-nodes.html
+
 ## Delegation for tasks between master and agent is fairly automatic
 ## However you can dictate if you want a particular agent for specific job
  su jenkins -s /bin/bash
