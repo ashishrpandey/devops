@@ -6,14 +6,14 @@ Check the version of java installed on you machine
 
           $java -version  ## Check if Java is already installed
 For jenkins Java 8 is required.
-Download Jenkins from www.jenkins.io/download for your platform
-Install Jenkin
-Launch Jenkin
-It shall open in web-browser at localhost:8080 
-Enter initial passowrd on the first page.
-Change admin password 
-Your Jenkin Dashboard is ready
-Explore it !!!
+- Download Jenkins from www.jenkins.io/download for your platform
+- Install Jenkin
+- Launch Jenkin
+- It shall open in web-browser at localhost:8080 
+- Enter initial passowrd on the first page.
+- Change admin password 
+- Your Jenkin Dashboard is ready
+- Explore it !!!
 
 # Step-by-step installation of Jenkins on ec2 instances 
 
@@ -34,10 +34,10 @@ If not done already -
    - and "custom tcp rule" at port number 8080
 
 In web browser open : <public ip>:8080    ## e.g 172.13.0.2:8080
-We will get jenkins dashboard:
-Login as admin with the password from (/var/lib/jenkins/secrets/initialAdminPassword).
-Change password.
-Create new user. ##optional
+- We will get jenkins dashboard:
+- Login as admin with the password from (/var/lib/jenkins/secrets/initialAdminPassword).
+- Change password.
+- Create new user. ##optional
 
 
 # Connecting it with github webhook 
