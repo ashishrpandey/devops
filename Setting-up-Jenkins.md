@@ -5,7 +5,12 @@ General procedure to install Jenkins:
 Check the version of java installed on you machine
 
           $java -version  ## Check if Java is already installed
+          
 For jenkins Java 8 is required.
+- In java is not installed, install the developemnt version of JDK 1.8.0 
+
+          yum install java-1.8.0-openjdk-devel.x86_64 -y 
+          
 - Download Jenkins from www.jenkins.io/download for your platform
 - Install Jenkin
 - Launch Jenkin
@@ -53,8 +58,13 @@ In web browser open : <public ip>:8080    ## e.g 172.13.0.2:8080
 
 # Setup maven tool 
 
-manage jenkins---> configure global tools --> add Java jdk--> add maven home --> add git --> IN the build step write
-clean package
+- manage jenkins---> 
+- configure global tools --> 
+- add Java jdk--> 
+- add maven home --> 
+- add git -->
+- in the build step write
+          clean package
 
 
 # Installation steps for ubuntu Machine 
