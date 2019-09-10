@@ -12,9 +12,11 @@ Tested on AWS ec2-instance running on Amazon Linux 2 AMI
     export MAVEN_HOME=/opt/maven
     export PATH=${M2_HOME}/bin:${PATH}
     " >/etc/profile.d/maven.sh
-  exit
-  sudo su 
-    
+  
+  sudo chmod +x /etc/profile.d/maven.sh
+  source /etc/profile.d/maven.sh
+
+
 Go to your maven-project's directory and check if the maven is working:
 
     mvn -version
