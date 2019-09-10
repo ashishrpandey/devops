@@ -11,6 +11,9 @@ For jenkins Java 8 is required.
 
           yum install java-1.8.0-openjdk-devel.x86_64 -y 
           
+- install some other utilities for Lab (#optional)
+
+          yum install git tree docker -y 
 - Download Jenkins from www.jenkins.io/download for your platform
 - Install Jenkin
 - Launch Jenkin
@@ -57,6 +60,8 @@ In web browser open : <public ip>:8080    ## e.g 172.13.0.2:8080
 
 
 # Setup maven tool 
+- maven needs to be installed. If not refere to link https://github.com/ashishrpandey/devops/blob/master/settingup-maven-latest-release.md
+
 
 - manage jenkins---> 
 - configure global tools --> 
