@@ -26,10 +26,14 @@ For jenkins Java 8 is required.
 # Step-by-step installation of Jenkins on ec2 instances 
 
           yum update -y
-          wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo  ## Add jenkins in yum repo
-          rpm --import http://pkg.jenkins-ci.org/redhat-stable/jenkins-ci.org.key  ##download the key necessary for proper installation
-          yum install jenkins  -y        ## install Jenkins
-          service jenkins start       ## Start Jenkins
+          
+          wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo             ## Add jenkins in yum repo
+          rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key                 ##download the key necessary for proper installation
+          yum install jenkins -y                   ## install Jenkins
+          yum install java-1.8.0-openjdk-devel.x86_64 -y    
+          systemctl start jenkins         ## Start Jenkins
+          systemctl status jenkins                 ## Check if Jenkins is working
+  
           chkconfig jenkins on        ## Check if Jenkins is working
           cat /var/lib/jenkins/secrets/initialAdminPassword           ## Get the initial admin password gor first login
                     ##use the content of file for initial admin password
