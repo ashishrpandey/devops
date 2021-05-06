@@ -33,13 +33,13 @@ Populate it with the content below -
     Require valid-user
     </Location>
 
-Restart Apache 
+Restart Apache and setup credentials (username - svn1)
 
     systemctl restart httpd
      htpasswd -cm /etc/svnusers svn1
 
-Open browser - 
+Open browser and login with the above credentials  
   
 -  http://127.0.0.1/svn/first-repo
--   http://server-public-IP/svn/first-repo
+-  http://server-public-IP/svn/first-repo
 
