@@ -1,5 +1,8 @@
 
-- first-repo is already created in svn-setup.md file 
+## Create first-repo  
+
+      svnadmin create /var/www/svn/first-repo
+
 - Here we need to put some code in the repo
 
 Download and import the code 
